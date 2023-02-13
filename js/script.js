@@ -16,11 +16,15 @@ const titleClickHandler = function (event) {
     }
 
     /* add class 'active' to the clicked link */
+    const clickedElement = this;
+    console.log('clickedElement:', clickedElement);
+    clickedElement.classList.add('active');
+
     /* remove class 'active' from all articles */
     const activeArticles = document.querySelectorAll('.titles a.active');
 
     for (let activeArticle of activeArticles) {
-        activeArticle;.classList.remove('active');
+        activeArticle.classList.remove('active');
     }
 
     /* get 'href' attribute from the clicked link */
