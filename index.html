@@ -283,7 +283,15 @@
             </main>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+    <script id="template-article-link" type="text/x-handlebars-template">
+        <li><a href="#{{ id }}"><span>{{ title }}</span></a></li>
+      </script>
+    <script id="template-author-link" type="text/x-handlebars-template">
+        <li><a href="#author-{{ id }}"><span>{{ title }}</span></a></li>
+      </script>
+    <script id="template-tag-link" type="text/x-handlebars-template">
+        <li><a href="#tag-{{ id }}"><span>{{ title }}</span></a></li>
+      </script>
     <script id="template-tag-cloud-link" type="text/x-handlebars-template">
         {{#each tags}}
         <li><a href="#tag-{{ tag }}" class="tag-size-{{ className }}">{{ tag }}</a></li>
@@ -294,6 +302,7 @@
         <li><a href="#author-{{ author }}" class="tag-size-{{ className }}">{{ author }} ({{ count }})</a></li>
         {{/each}}
       </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
